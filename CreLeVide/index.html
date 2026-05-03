@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>CreLeVide</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="favicon.png">
+
+	<script type="module" src="script.js"></script>
+</head>
+
+<body>
+
+	<h1>CreLeVide</h1>
+	<h3>Image/Video  to Robot64 Level</h3>
+	<p><i>WORK IN PROGRESS | Videos do not work yet :(</i></p>
+	<div id="input">
+		<input name="file" type="file" id="FilePicker" value="">
+
+		<label for="xsize">Dimensions:</label>
+		<input id="xsize" placeholder="X Size" name="size" type="number" min="3" max="15" style="width: 80px;">
+		<input id="ysize" placeholder="Y Size" name="size" type="number" min="3" style="width: 80px;">
+
+		<label for="animate">Animate Video:</label>
+		<input id="animate" type="checkbox" name="animate">
+
+		<button id="Convert">Convert</button>
+	</div>
+	<br>
+	<div id="preview">
+		<img id="previewImage" style="display:none">
+		<video id="previewVideo" style="display:none" controls>
+			Browser does not support video, what are you even trying to do?
+		</video>
+	</div>
+	<br>
+
+	<p>Use the copy button to copy code, do not triple click text, it adds trailing and preceding spaces which makes it unreadable.</p>
+	<button id="copy">Copy Code</button>
+	<br><br><br>
+	<div id="codecontainer">
+		<code id="code">Output Code will be here</code>
+	</div>
+	<canvas id="canvas">Browser does not support canvas :(</canvas>
+</body>
+</html>
