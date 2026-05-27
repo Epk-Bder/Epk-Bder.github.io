@@ -1,0 +1,38 @@
+body {
+    background-color: #222222;
+    color: white;
+}
+
+img, video {
+    height: 20rem;
+}
+
+#input {
+    display: inline-block;
+    border: 1px solid white;
+    padding: 12px;
+    margin: 16px;
+}
+
+#preview {
+    border: 1px solid white;
+    padding: 16px;
+    margin: 16px;
+    display: none;
+}
+
+#codecontainer {
+    border: 1px solid white;
+    margin: 16px;
+    padding: 12px;
+    width: 90%;
+    display: block;
+}
+
+canvas {
+    display: none;
+}
+
+label {
+    font-size: 12px;
+}
