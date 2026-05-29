@@ -15,10 +15,13 @@ function fixScript(text) {
             const trimmedLine = line.trim();
 
             const hasFunctionDef = trimmedLine.includes("function ");
-            const hasFunctionCon = trimmedLine.includes("function(")
+            const hasFunctionCon = trimmedLine.includes("function(");
+            const hasElse = trimmedLine.includes("else");
+            const hasWhile = trimmedLine.includes("while");
             const hasThen = trimmedLine.endsWith("then");
 
-            if (hasFunctionDef || hasThen || hasFunctionCon) {
+
+            if (hasFunctionDef || hasThen || hasFunctionCon || hasElse || hasWhile) {
                 return line;
             }
 
@@ -34,11 +37,11 @@ button.onclick = () => {
 
     const res = fixScript(text)
 
-    code.innerHTML = res
+    code.textContent = res
 }
 
 copy.onclick = () => {
-    const text = code.innerHTML;
+    const text = code.textContent;
 
     navigator.clipboard.writeText(text).then(() => {
         alert("Copied to clipboard!");
