@@ -18,10 +18,11 @@ function fixScript(text) {
             const hasFunctionCon = trimmedLine.includes("function(");
             const hasElse = trimmedLine.includes("else");
             const hasWhile = trimmedLine.includes("while");
+            const hasFor = trimmedLine.includes("for ")
             const hasThen = trimmedLine.endsWith("then");
 
 
-            if (hasFunctionDef || hasThen || hasFunctionCon || hasElse || hasWhile) {
+            if (hasFunctionDef || hasThen || hasFunctionCon || hasElse || hasWhile || hasFor) {
                 return line;
             }
 
